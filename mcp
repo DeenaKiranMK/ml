@@ -1,0 +1,32 @@
+def mcp_and(x1, x2):
+    
+    w1, w2 = 1, 1
+    threshold = 2 
+
+    weighted_sum = w1 * x1 + w2 * x2
+    return 1 if weighted_sum >= threshold else 0
+
+
+for x1 in [0, 1]:
+    for x2 in [0, 1]:
+        print(f"AND({x1}, {x2}) = {mcp_and(x1, x2)}")
+def mcp_or(x1, x2):
+    w1, w2 = 1, 1
+    threshold = 1 
+
+    weighted_sum = w1 * x1 + w2 * x2
+    return 1 if weighted_sum >= threshold else 0
+
+
+for x1 in [0, 1]:
+    for x2 in [0, 1]:
+        print(f"OR({x1}, {x2}) = {mcp_or(x1, x2)}")
+def mcp_not(x):
+    w = -1
+    threshold = 0
+    weighted_sum = w * x
+    return 1 if weighted_sum >= threshold else 0
+
+
+for x in [0, 1]:
+    print(f"NOT({x}) = {mcp_not(x)}")
